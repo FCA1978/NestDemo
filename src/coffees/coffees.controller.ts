@@ -7,6 +7,7 @@ import {
   HttpCode,
   HttpStatus,
   Res,
+  Patch,
 } from '@nestjs/common';
 
 @Controller('coffees')
@@ -22,8 +23,12 @@ export class CoffeesController {
   }
 
   @Post()
-  @HttpCode(HttpStatus.GONE)
   create(@Body() body) {
     return body;
+  }
+
+  @Patch(':id')
+  update(id: string, body) {
+    return `This action updates #${id} coffee`;
   }
 }
