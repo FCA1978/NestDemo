@@ -1,14 +1,4 @@
-import {
-  Controller,
-  Get,
-  Param,
-  Post,
-  Body,
-  HttpCode,
-  HttpStatus,
-  Res,
-  Patch,
-} from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Res, Patch } from '@nestjs/common';
 
 @Controller('coffees')
 export class CoffeesController {
